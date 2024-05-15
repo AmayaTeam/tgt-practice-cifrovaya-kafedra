@@ -1,0 +1,12 @@
+[
+  {
+    "id": "80d5c792-6435-447d-85d7-f9ca07a7b993",
+    "name": "FCAP",
+    "sensor_id": null
+  },
+  {
+    "id": "15a734e6-8d66-426f-836d-ba4141389a26",
+    "name": "Temperature",
+    "sensor_id": "1"
+  }
+]

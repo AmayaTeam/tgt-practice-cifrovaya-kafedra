@@ -1,0 +1,52 @@
+version: "3.8"
+services:
+  tgt_practice_frontend:
+    container_name: tgt_practice_frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app/frontend
+      - ./frontend/node_modules:/app/frontend/node_modules
+    environment:
+      - NODE_ENV=development
+      - BACKEND_URL=http://localhost:8000/graphql/
+      - PORT=8000
+    depends_on:
+      - tgt_practice_backend
+  tgt_practice_backend:
+    container_name: tgt_practice_backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    command: sh -c "poetry run python manage.py migrate &&
+      poetry run python manage.py runserver 0.0.0.0:8000"
+    tty: true
+    volumes:
+      - ./backend:/app/backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - tgt_practice_database
+    environment:
+      DB_NAME: tools_app
+      DB_USER: tools_app
+      DB_PASS: tools_app
+      DB_PORT: 5432
+      DJANGO_SETTINGS_MODULE: tools_app.settings
+
+  tgt_practice_database:
+    image: postgres:14.1-alpine
+    container_name: tgt_practice_database
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: tools_app
+      POSTGRES_USER: tools_app
+      POSTGRES_PASSWORD: tools_app
+    volumes:
+      - tgt_practice_database:/var/lib/postgresql/data
+volumes:
+  tgt_practice_database:

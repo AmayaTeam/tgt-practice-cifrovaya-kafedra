@@ -1,0 +1,30 @@
+[
+  {
+    "id": "5d920207-56f8-44d6-a855-82563748845c",
+    "name": "BM",
+    "r_modules_group_id": "5d920207-56f8-44d6-a855-82563748845c",
+    "module_type_id": null,
+    "hash_code": "585abe92b05780d4882c0764946d0046"
+  },
+  {
+    "id": "f776650e-669d-477f-84ce-1727e88dfe71",
+    "name": "CFS",
+    "r_modules_group_id": "5d920207-56f8-44d6-a855-82563748845c",
+    "module_type_id": null,
+    "hash_code": "7f17447a66d88cccf474c1a07d7941d5"
+  },
+  {
+    "id": "100dfc91-5122-4019-953a-aba757e31ed8",
+    "name": "MRI",
+    "r_modules_group_id": "5d920207-56f8-44d6-a855-82563748845c",
+    "module_type_id": null,
+    "hash_code": "9178aa355ebeb54aa4b0cb85dff70188"
+  },
+  {
+    "id": "f6886969-69c0-4408-ac6e-f82f2a0ed761",
+    "name": "FBS",
+    "r_modules_group_id": "5d920207-56f8-44d6-a855-82563748845c",
+    "module_type_id": null,
+    "hash_code": "d9697fbd456bd8e102fb82a4b49be628"
+  }
+]

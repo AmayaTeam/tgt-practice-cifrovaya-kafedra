@@ -1,0 +1,4 @@
+frontend/node_modules
+.dockerignore
+docker-compose.yml
+frontend/Dockerfile
